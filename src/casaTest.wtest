@@ -1,0 +1,20 @@
+import casa.*
+import cosas.*
+
+test "cant de cosas compradas" {
+	casaDePepeYJulian.comprar(tiraDeAsado)
+	casaDePepeYJulian.comprar(cama)
+	assert.that(casaDePepeYJulian.cantidadDeCosasCompradas() == 2)
+	casaDePepeYJulian.comprar(plancha)
+	assert.notThat(casaDePepeYJulian.cantidadDeCosasCompradas() == 2)
+}
+
+test "tiene comida" {
+	casaDePepeYJulian.comprar(cama)
+	assert.notThat(casaDePepeYJulian. tieneComida())
+	casaDePepeYJulian.comprar(tiraDeAsado)
+	assert.that(casaDePepeYJulian. tieneComida())
+}
+
+
+

@@ -21,7 +21,7 @@ object casaDePepeYJulian {
 	}
 	
 	method esDerrochona(){
-		return cosas.sum({a=> a.precio()}) >= 9000
+		return (cosas.sum({a=> a.precio()})) >= 9000
 	}
 	
 	method comprarMasCara(){
@@ -29,10 +29,19 @@ object casaDePepeYJulian {
 	}
 	
 	method electrodomesticosComprados(){
-		
+		return cosas.filter({a=> a.esElectrodomestico()})
 	}
 	
+	method malaEpoca(){
+		return cosas.all({a=> a.esComida()})
+	}
 	
+	method queFaltaComprar(lista){
+	//return (lista,asSet()). diference(cosas.asset())
+	}
 	
+	method faltaComida(){
+		return 
+	}
 	
 }
