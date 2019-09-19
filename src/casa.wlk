@@ -37,11 +37,13 @@ object casaDePepeYJulian {
 	}
 	
 	method queFaltaComprar(lista){
-	//return (lista,asSet()). diference(cosas.asset())
+		return ((lista.asSet()).difference(cosas.asSet()))
 	}
 	
 	method faltaComida(){
-		return 
+		return (cosas.filter({a=> a.esComida()}).size() < 2 )
 	}
+	
+	
 	
 }
